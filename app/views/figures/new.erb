@@ -3,7 +3,7 @@
 <form action="/figures" method="POST">
 
   <label>Figure Name:</label>
-  <input type="text" id="figure_name" name="figure[name]">
+  <input type="text" name="figure[name]" id="figure_name">
   <br><br>
 
   <label>Titles:</label>
@@ -11,7 +11,7 @@
   <% Title.all.each do |title| %>
 
     <!-- <label><%= title.name %></label> -->
-    <br><input type="checkbox" id="title_<%=title.id %>" name="figure[title_ids][]" value="<%= title.id %>">
+    <br><input type="checkbox" name="figure[title_ids][]" id="title_<%=title.id %>" value="<%= title.id %>">
     <label><%= title.name %></label>
   <% end %>
 
