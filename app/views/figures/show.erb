@@ -1,8 +1,8 @@
 <label>Figure: </label>
 <p>
-  Name: <%= @figure.name %>
-  Title:
+  Name: <%= @figure.name %><br>
+  Title(s):
   <% @figure.titles.each do |title| %>
-    <%= title.name %>
+    <br><%= title.name %>
   <% end %>
 </p>
