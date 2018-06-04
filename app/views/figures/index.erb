@@ -2,7 +2,6 @@
 
 <% Figure.all.each do |figure| %>
   <p>
-    <% binding.pry %>
     Name: <a href="/figures/<%= figure.id %>"><%= figure.name %><br><br>
   </p>
 <% end %>
