@@ -43,10 +43,10 @@ class FiguresController < ApplicationController
   post '/figures/:id' do
     @figure = Figure.find(params[:id])
     @figure.update(params[:figure])
-    if !params[:landmark].empty?
+    if !params[:landmark][:name].empty?
       @figure.landmarks << Landmark.create(params[:landmark])
     end
-    if !params[:title].empty?
+    if !params[:title][:name].empty?
       @figure.titles << Title.create(params[:title])
     end
 
