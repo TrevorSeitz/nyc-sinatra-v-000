@@ -4,10 +4,5 @@
 <p>
   Name: <%= @figure.name %>
   <% binding.pry %>
-  Title(s):
-  <%binding.pry%>
-    <%= @figure.titles.each do |title| %>
-    <% binding.pry %>
-      <%= name %>
-    <% end %>
+  Title: <%= @figure.titles %>
 </p>
