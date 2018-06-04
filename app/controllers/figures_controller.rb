@@ -16,11 +16,13 @@ class FiguresController < ApplicationController
     @figure = Figure.create(params["figure"])
 #assign landmark if needed
     if !params[:landmark][:name].empty?
+      binding.pry
       @figure.landmarks << Landmark.create(params[:landmark])
     end
 
 #assign title if needed
     if !params[:title][:name].empty?
+      binding.pry
       @figure.titles << Title.create(params[:title])
     end
     @figure.save
