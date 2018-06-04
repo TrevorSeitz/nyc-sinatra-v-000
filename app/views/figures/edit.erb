@@ -14,7 +14,7 @@
 
     <!-- <label><%= title.name %></label> -->
     <% binding.pry %>
-    <br><input type="checkbox" id="title_<%=title.id %>" name="figure[title_ids][]" value="<%= title.id %>" <%= 'checked' if figure[title_ids][].include?(id) %>>
+    <br><input type="checkbox" id="title_<%=title.id %>" name="figure[title_ids][]" value="<%= title.id %>" <%= 'checked' if title.include?(id) %>>
       <!-- <input type="checkbox" name="genres[]" value="<%= genre.id %>" id="<%= genre.name %>" <%= 'checked' if @song.genres.include?(genre) %>> -->
     <label><%= title.name %></label>
   <% end %>
