@@ -13,8 +13,9 @@
   <% Title.all.each do |title| %>
 
     <!-- <label><%= title.name %></label> -->
-    <br><input type="checkbox" id="title_<%=title.id %>" name="figure[title_ids][]" value="<%= title.id %>">
-    
+    <% binding.pry %>
+    <br><input type="checkbox" id="title_<%=title.id %>" name="figure[title_ids][]" value="<%= title.id %>" <%= 'checked' if figure[title_ids][].include?(id) %>>
+      <!-- <input type="checkbox" name="genres[]" value="<%= genre.id %>" id="<%= genre.name %>" <%= 'checked' if @song.genres.include?(genre) %>> -->
     <label><%= title.name %></label>
   <% end %>
 
