@@ -20,7 +20,6 @@ class FiguresController < ApplicationController
     end
 
 #assign title if needed
-binding.pry
     if !params[:title][:name].empty?
       binding.pry
       @figure.titles << Title.create(params[:title])
