@@ -16,7 +16,6 @@ class FiguresController < ApplicationController
     @figure = Figure.create(params["figure"])
 #assign landmark if needed
     if !params[:landmark][:name].empty?
-      binding.pry
       @figure.landmarks << Landmark.create(params[:landmark])
     end
 
