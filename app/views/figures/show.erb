@@ -1,10 +1,8 @@
 <label>Figure: </label>
 <p>
   Name: <%= @figure.name %>
-  <% binding.pry %>
   Title:
   <% @figure.titles.each do |title| %>
     <%= title.name %>
-  <% binding.pry %>
   <% end %>
 </p>
