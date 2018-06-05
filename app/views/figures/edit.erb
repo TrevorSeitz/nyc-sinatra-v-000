@@ -25,7 +25,7 @@
 
   <% Landmark.all.each do |landmark| %>
     <!-- <label><%= landmark.name %></label> -->
-    <br><input type="checkbox" id="landmark_<%=landmark.id %>" name="figure[landmark_ids][]" value="<%= landmark.id %>" <%= 'checked' if @figure.landmarks.include?(landmark) %>>
+    <br><input type="checkbox" id="landmark_<%=landmark.id %>" name="figure[landmark_ids][]" value="<%= landmark.id %> - Completed: <%= landmark.year_completed %>" <%= 'checked' if @figure.landmarks.include?(landmark) %>>
     <label><%= landmark.name %></label>
   <% end %>
 
