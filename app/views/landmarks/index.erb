@@ -1,19 +1,19 @@
 <label>Landmarks: </label>
 
-
 <table>
   <tr>
     <th>Name</th>
     <th>Year Completed</th>
   </tr>
   <% Landmark.all.each do |landmark| %>
-  <tr>
-    <td><a href="/landmarks/<%= landmark.id %>"><%= landmark.name %></td>
-    <td><%= landmark.year_completed %></td>
-  </tr>
+    <tr>
+      <td><a href="/landmarks/<%= landmark.id %>"><%= landmark.name %></td>
+      <td><%= landmark.year_completed %></td>
+    </tr>
+  <% end %>
 <table>
+
 <br><br>
 <form action="/Landmarks/new" method="get">
   <input type="submit" id="forward_to_new_landmark" value="New Landmark">
 </form>
-<% end %>
