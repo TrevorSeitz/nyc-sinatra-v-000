@@ -9,6 +9,6 @@ class ApplicationController < Sinatra::Base
   register Sinatra::Twitter::Bootstrap::Assets
 
   get '/' do
-    erb :'/figures/new'
+    erb :'/landmarks/index'
   end
 end
