@@ -14,16 +14,6 @@ class LandmarksController < ApplicationController
   post '/landmarks' do
 #create New Landmark
     @landmark = Landmark.create(params["landmark"])
-#assign figure if needed
-    if !params[:figure][:name].empty?
-      @landmark.figures << Figure.create(params[:figures])
-    end
-
-#assign title if needed
-    if !params[:title][:name].empty?
-      @landmark.titles << Title.create(params[:title])
-    end
-
     @landmark.save
 
     redirect to "landmarks/#{@landmark.id}"
