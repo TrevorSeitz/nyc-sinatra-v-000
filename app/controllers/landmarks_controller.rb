@@ -32,7 +32,7 @@ class LandmarksController < ApplicationController
     binding.pry
     @landmark = Landmark.find(params[:id])
 
-    erb :'/figures/show'
+    erb :'/landmarks/show'
   end
 
   get '/landmarks/:id/edit' do
