@@ -1,7 +1,14 @@
 <label>Landmarks: </label>
 
 <% Landmark.all.each do |landmark| %>
-<p>
-  <a href="/landmarks/<%= landmark.id %>"><%= landmark.name %> Year Completed: <%= landmark.year_completed %><br><br>
-</p>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Year Completed</th>
+    </tr>
+    <tr>
+      <td><a href="/landmarks/<%= landmark.id %>"><%= landmark.name %></td>
+      <td><%= landmark.year_completed %></td>
+    </tr>
+  <table>
 <% end %>
