@@ -22,7 +22,7 @@ class FiguresController < ApplicationController
     if !params[:title][:name].empty?
       @figure.titles << Title.create(params[:title])
     end
-    
+
     @figure.save
 
     redirect to "figures/#{@figure.id}"
@@ -35,6 +35,7 @@ class FiguresController < ApplicationController
   end
 
   get '/figures/:id/edit' do
+    binding.pry
     @figure = Figure.find(params[:id])
 
     erb :'figures/edit'
