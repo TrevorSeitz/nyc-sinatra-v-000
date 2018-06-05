@@ -11,14 +11,13 @@
     <br>- <%= landmark.name %>
   <% end %>
 </p>
-<% binding.pry %>
 <br><br>
 
 <form action="/figures/<%=params[:id]%>/edit" method="get">
   <input type="submit" id="edit_figure" value="Edit">
 </form>
-
 <br><br>
+
 <form action="/" method="get">
   <input type="submit" id="back_to_index" value="Back to Main Page">
 </form>
