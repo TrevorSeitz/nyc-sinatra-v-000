@@ -2,7 +2,7 @@ class LandmarksController < ApplicationController
 
   get '/landmarks' do
     @landmarks = Landmark.all
-binding.pry
+    
     erb :'/landmarks/index'
   end
 
