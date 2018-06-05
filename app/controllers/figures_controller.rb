@@ -36,6 +36,7 @@ class FiguresController < ApplicationController
 
   get '/figures/:id/edit' do
     binding.pry
+
     @figure = Figure.find(params[:id])
 
     erb :'figures/edit'
