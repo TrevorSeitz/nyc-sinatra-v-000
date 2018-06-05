@@ -40,7 +40,7 @@ class LandmarksController < ApplicationController
     erb :'landmarks/edit'
   end
 
-  post '/landmark/:id' do
+  post '/landmarks/:id' do
     @landmark = Landmark.find(params[:id])
     @landmark.update(params[:landmark])
     if !params[:figures][:name].empty?
